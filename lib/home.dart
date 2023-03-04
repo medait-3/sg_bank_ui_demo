@@ -12,7 +12,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  final _prix = 1222;
+  final _prix = 12122;
   late bool _passwordVisible;
 
   @override
@@ -132,28 +132,60 @@ class _HomeState extends State<Home> {
                       ],
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.audiotrack,
-                            color: Colors.green,
-                            size: 30.0,
-                          ),
-                          Text(
-                            "EN TRAITMENT",
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        ],
-                      ),
-                      Text(
-                        "EN TRAITMENT",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ],
-                  )
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 17, vertical: 2),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.transit_enterexit,
+                              color: Colors.white,
+                              size: 20.0,
+                            ),
+                            Text(
+                              "EN TRAITMENT",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          "+999,00 DH",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 17, vertical: 2),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.replay,
+                              color: Colors.white,
+                              size: 20.0,
+                            ),
+                            Text(
+                              "MISE A JOUR",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ],
+                        ),
+                        Text(
+                          "01/03/2023",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
               color: Colors.redAccent,
