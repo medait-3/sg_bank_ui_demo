@@ -213,7 +213,7 @@ class _HomeState extends State<Home> {
               color: Colors.white,
               child: SizedBox(
                 width: 300,
-                height: 200,
+                height: 220,
                 child: Padding(
                   padding: const EdgeInsets.all(2.0),
                   child: Column(
@@ -384,21 +384,22 @@ class _HomeState extends State<Home> {
                         height: 21,
                       ),
                       Expanded(
-                        child: ElevatedButton(
-                            style: ButtonStyle(
-                                backgroundColor:
-                                    MaterialStateProperty.all(Colors.green),
-                                padding: MaterialStateProperty.all(
-                                    const EdgeInsets.all(20)),
-                                textStyle: MaterialStateProperty.all(
-                                    const TextStyle(
-                                        fontSize: 1,
-                                        color:
-                                            Color.fromARGB(255, 93, 59, 59)))),
-                            onPressed: () {
-                              setState(() {});
-                            },
-                            child: const Text('En')),
+                        child: Container(
+                          width: double.infinity,
+                          child: ElevatedButton(
+                              style: ButtonStyle(
+                                  backgroundColor:
+                                      MaterialStateProperty.all(Colors.white),
+                                  padding: MaterialStateProperty.all(
+                                      const EdgeInsets.all(0)),
+                                  textStyle: MaterialStateProperty.all(
+                                      const TextStyle(
+                                          fontSize: 12, color: Colors.black))),
+                              onPressed: () {
+                                setState(() {});
+                              },
+                              child: const Text('En')),
+                        ),
                       ),
                     ],
                   ), //Column
