@@ -213,12 +213,193 @@ class _HomeState extends State<Home> {
               color: Colors.white,
               child: SizedBox(
                 width: 300,
-                height: 100,
+                height: 200,
                 child: Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(2.0),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(width: 100, child: null),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 12, vertical: 11),
+                        child: Text(
+                          "HISTORIQUE",
+                          style: TextStyle(
+                              color: Colors.red,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 11),
+                        child: Row(
+                          children: [
+                            Container(
+                              color: Colors.greenAccent,
+                              height: 25,
+                              width: 2,
+                            ),
+                            SizedBox(
+                              width: 7,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "DATE A VENIR",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                                SizedBox(
+                                  height: 2,
+                                ),
+                                Row(
+                                  children: [
+                                    Text(
+                                      "VERSET ESPECES DEPL N",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 13),
+                                    ),
+                                    SizedBox(
+                                      width: 31,
+                                    ),
+                                    Text(
+                                      "+919,00 DH",
+                                      style: TextStyle(
+                                          color: Colors.greenAccent,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 13),
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 11),
+                        child: Row(
+                          children: [
+                            Container(
+                              color: Colors.redAccent,
+                              height: 25,
+                              width: 2,
+                            ),
+                            SizedBox(
+                              width: 7,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "DATE A VENIR",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                                SizedBox(
+                                  height: 2,
+                                ),
+                                Row(
+                                  children: [
+                                    Text(
+                                      "VERSET ESPECES DEPL N",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 13),
+                                    ),
+                                    SizedBox(
+                                      width: 31,
+                                    ),
+                                    Text(
+                                      "-19,00 DH",
+                                      style: TextStyle(
+                                          color: Colors.redAccent,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 13),
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 11),
+                        child: Row(
+                          children: [
+                            Container(
+                              color: Colors.greenAccent,
+                              height: 25,
+                              width: 2,
+                            ),
+                            SizedBox(
+                              width: 7,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "DATE A VENIR",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(fontSize: 13),
+                                ),
+                                SizedBox(
+                                  height: 2,
+                                ),
+                                Row(
+                                  children: [
+                                    Text(
+                                      "VERSET ESPECES DEPL N",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 13),
+                                    ),
+                                    SizedBox(
+                                      width: 31,
+                                    ),
+                                    Text(
+                                      "+919,00 DH",
+                                      style: TextStyle(
+                                          color: Colors.greenAccent,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 13),
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 21,
+                      ),
+                      Expanded(
+                        child: ElevatedButton(
+                            style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateProperty.all(Colors.green),
+                                padding: MaterialStateProperty.all(
+                                    const EdgeInsets.all(20)),
+                                textStyle: MaterialStateProperty.all(
+                                    const TextStyle(
+                                        fontSize: 1,
+                                        color:
+                                            Color.fromARGB(255, 93, 59, 59)))),
+                            onPressed: () {
+                              setState(() {});
+                            },
+                            child: const Text('En')),
+                      ),
                     ],
                   ), //Column
                 ), //Padding
