@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:sg_bank_ui/componant/mycard.dart';
+import 'package:sg_bank_ui/componant/mycirculebutton.dart';
 import 'package:sg_bank_ui/componant/mytxt.dart';
 
 import 'componant/appbar.dart';
@@ -190,6 +191,52 @@ class _HomeState extends State<Home> {
                 Expanded(
                   child: Container(
                     color: Colors.white12,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          height: 32,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 8.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              MyCirculbutton(
+                                title: "CARTES",
+                                color1: Colors.red,
+                              ),
+                              SizedBox(
+                                width: 52,
+                              ),
+                              MyCirculbutton(
+                                title: " VIRMENTS",
+                                color1: Colors.red,
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 22, right: 8.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              MyCirculbutton(
+                                title: "CARTES",
+                                color1: Colors.red,
+                              ),
+                              SizedBox(
+                                width: 52,
+                              ),
+                              MyCirculbutton(
+                                title: " VIRMENTS",
+                                color1: Colors.red,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:sg_bank_ui/componant/mytxt.dart';
 
 class MyCard extends StatelessWidget {
   const MyCard({super.key});
@@ -10,25 +11,24 @@ class MyCard extends StatelessWidget {
     return Align(
       alignment: Alignment.centerRight,
       child: Card(
-        elevation: 50,
+        elevation: 5,
         shadowColor: Colors.black,
-        color: Colors.white,
-        child: SizedBox(
-          width: 300,
-          height: 220,
-          child: Padding(
-            padding: const EdgeInsets.all(2.0),
+
+        child: Container(
+          color: Colors.white70,
+          child: SizedBox(
+            width: 300,
+            height: 220,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 12, vertical: 11),
-                  child: Text(
-                    "HISTORIQUE",
-                    style: TextStyle(
-                        color: Colors.red,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15),
+                  child: MyText(
+                    txt: "HISTORIQUE",
+                    size: 15,
+                    FontWeight: FontWeight.bold,
+                    color: Colors.red,
                   ),
                 ),
                 Padding(
@@ -46,30 +46,30 @@ class MyCard extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
-                            "DATE A VENIR",
-                            textAlign: TextAlign.left,
-                            style: TextStyle(fontSize: 13),
+                          MyText(
+                            txt: "DATE A VENIR",
+                            size: 13,
+                            color: Colors.black,
                           ),
                           const SizedBox(
                             height: 2,
                           ),
                           Row(
                             children: [
-                              const Text(
-                                "VERSET ESPECES DEPL N",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 13),
+                              MyText(
+                                txt: "VERSET ESPECES DEPL N",
+                                size: 13,
+                                color: Colors.black,
+                                FontWeight: FontWeight.bold,
                               ),
                               const SizedBox(
-                                width: 31,
+                                width: 35,
                               ),
-                              const Text(
-                                "+919,00 DH",
-                                style: TextStyle(
-                                    color: Colors.greenAccent,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 13),
+                              MyText(
+                                txt: "+919,00 DH",
+                                size: 13,
+                                color: Colors.greenAccent,
+                                FontWeight: FontWeight.bold,
                               ),
                             ],
                           )
@@ -96,30 +96,30 @@ class MyCard extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
-                            "DATE A VENIR",
-                            textAlign: TextAlign.left,
-                            style: TextStyle(fontSize: 13),
+                          MyText(
+                            txt: "DATE A VENIR",
+                            size: 13,
+                            color: Colors.black,
                           ),
                           const SizedBox(
                             height: 2,
                           ),
                           Row(
                             children: [
-                              const Text(
-                                "VERSET ESPECES DEPL N",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 13),
+                              MyText(
+                                txt: "VERSET ESPECES DEPL N",
+                                size: 13,
+                                color: Colors.black,
+                                FontWeight: FontWeight.bold,
                               ),
                               const SizedBox(
-                                width: 31,
+                                width: 35,
                               ),
-                              const Text(
-                                "-19,00 DH",
-                                style: TextStyle(
-                                    color: Colors.redAccent,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 13),
+                              MyText(
+                                txt: "-919,00 DH",
+                                size: 13,
+                                color: Colors.redAccent,
+                                FontWeight: FontWeight.bold,
                               ),
                             ],
                           )
@@ -146,30 +146,30 @@ class MyCard extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
-                            "DATE A VENIR",
-                            textAlign: TextAlign.left,
-                            style: TextStyle(fontSize: 13),
+                          MyText(
+                            txt: "DATE A VENIR",
+                            size: 13,
+                            color: Colors.black,
                           ),
                           const SizedBox(
                             height: 2,
                           ),
                           Row(
                             children: [
-                              const Text(
-                                "VERSET ESPECES DEPL N",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 13),
+                              MyText(
+                                txt: "VERSET ESPECES DEPL N",
+                                size: 13,
+                                color: Colors.black,
+                                FontWeight: FontWeight.bold,
                               ),
                               const SizedBox(
-                                width: 31,
+                                width: 35,
                               ),
-                              const Text(
-                                "+919,00 DH",
-                                style: TextStyle(
-                                    color: Colors.greenAccent,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 13),
+                              MyText(
+                                txt: "+919,00 DH",
+                                size: 13,
+                                color: Colors.greenAccent,
+                                FontWeight: FontWeight.bold,
                               ),
                             ],
                           )
@@ -179,15 +179,16 @@ class MyCard extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 21,
+                  height: 20,
                 ),
                 Expanded(
                   child: Container(
                     width: double.infinity,
                     child: ElevatedButton(
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(
-                              const Color.fromARGB(255, 255, 255, 255)),
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.white,
+                          elevation: 20, // Elevation
+                          shadowColor: Colors.black, // Shadow Color
                         ),
                         onPressed: () {},
                         child: const Text(
@@ -200,8 +201,8 @@ class MyCard extends StatelessWidget {
                   ),
                 ),
               ],
-            ), //Column
-          ), //Padding
+            ), //Padding
+          ),
         ), //SizedBox
       ),
     );
