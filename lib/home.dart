@@ -191,16 +191,16 @@ class _HomeState extends State<Home> {
                 Expanded(
                   child: Container(
                     color: Colors.white12,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          height: 32,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 8.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 38.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               MyCirculbutton(
                                 title: "CARTES",
@@ -215,11 +215,11 @@ class _HomeState extends State<Home> {
                               ),
                             ],
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 22, right: 8.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               MyCirculbutton(
                                 title: "CARTES",
@@ -234,8 +234,8 @@ class _HomeState extends State<Home> {
                               ),
                             ],
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -243,6 +243,31 @@ class _HomeState extends State<Home> {
             ),
           ),
           MyCard(),
+          Align(
+            alignment: Alignment.bottomRight,
+            child: Container(
+              height: 65,
+              width: 300,
+              color: Colors.redAccent,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    "SG STORE",
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "VOTRE BOUTIQUE ONLINE",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );
