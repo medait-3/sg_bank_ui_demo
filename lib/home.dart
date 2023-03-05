@@ -3,6 +3,11 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:sg_bank_ui/componant/mycard.dart';
+import 'package:sg_bank_ui/componant/mytxt.dart';
+
+import 'componant/appbar.dart';
+import 'componant/status_view.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -55,48 +60,38 @@ class _HomeState extends State<Home> {
               children: [
                 Expanded(
                   child: Container(
+                    color: Colors.redAccent,
                     alignment: Alignment.topCenter,
                     child: Column(
                       children: [
-                        Row(
-                          children: [
-                            Padding(
-                                padding: EdgeInsets.all(10),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(50.0),
-                                  child: Image.network(
-                                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnOlm4eSbJJ3l_y78tKAD1ym4PjVnGbokEhkU3vHya&s",
-                                    height: 50.0,
-                                    width: 50.0,
-                                    fit: BoxFit.cover, //change image fill type
-                                  ),
-                                )),
-                            //Ci
-                          ],
-                        ),
+                        Row(children: [
+                          const Status(),
+                          const SizedBox(width: 2),
+                          const Status(),
+                        ]),
                         Padding(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 17, vertical: 5),
+                              horizontal: 17, vertical: 1),
                           child: Row(
                             children: [
-                              Text(
-                                "COMPTE",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 18),
+                              MyText(
+                                txt: "COMPTE",
+                                size: 16,
+                                color: Colors.white,
+                                FontWeight: null,
                               ),
-                              Text(
-                                " CHÉQUE DIRHAMS",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 18),
-                              ),
+                              MyText(
+                                  txt: " CHÉQUE DIRHAMS",
+                                  size: 16,
+                                  color: Colors.white,
+                                  FontWeight: FontWeight.bold),
                             ],
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 17, vertical: 2),
+                            horizontal: 17,
+                          ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -106,27 +101,25 @@ class _HomeState extends State<Home> {
                                     visible: _passwordVisible,
                                     child: Text(
                                       "${_prix}",
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           color: Colors.white,
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 20),
+                                          fontSize: 18),
                                     ),
                                   ),
-                                  Text(
-                                    " DH",
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 20),
-                                  ),
+                                  MyText(
+                                      txt: " DH",
+                                      size: 18,
+                                      color: Colors.white),
                                 ],
                               ),
                               IconButton(
-                                  iconSize: 25,
                                   color: Colors.white,
                                   icon: Icon(
                                     _passwordVisible
                                         ? Icons.visibility
                                         : Icons.visibility_off,
-                                    size: 18,
+                                    size: 19,
                                   ),
                                   onPressed: () {
                                     setState(() {
@@ -138,29 +131,28 @@ class _HomeState extends State<Home> {
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 17, vertical: 2),
+                              horizontal: 17, vertical: 1),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Row(
                                 children: [
-                                  Icon(
+                                  const Icon(
                                     Icons.transit_enterexit,
                                     color: Colors.white,
-                                    size: 20.0,
+                                    size: 18.0,
                                   ),
-                                  Text(
-                                    "EN TRAITMENT",
-                                    style: TextStyle(color: Colors.white),
-                                  ),
+                                  MyText(
+                                      txt: "EN TRAITMENT",
+                                      size: 13,
+                                      color: Colors.white),
                                 ],
                               ),
-                              Text(
-                                "+999,00 DH",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white),
-                              ),
+                              MyText(
+                                  txt: "+999,00 DH",
+                                  size: 13,
+                                  FontWeight: FontWeight.bold,
+                                  color: Colors.white),
                             ],
                           ),
                         ),
@@ -172,29 +164,27 @@ class _HomeState extends State<Home> {
                             children: [
                               Row(
                                 children: [
-                                  Icon(
+                                  const Icon(
                                     Icons.replay,
                                     color: Colors.white,
-                                    size: 20.0,
+                                    size: 18.0,
                                   ),
-                                  Text(
-                                    "MISE A JOUR",
-                                    style: TextStyle(color: Colors.white),
-                                  ),
+                                  MyText(
+                                      txt: "MISE A JOUR",
+                                      size: 13,
+                                      color: Colors.white),
                                 ],
                               ),
-                              Text(
-                                "01/03/2023",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white),
-                              ),
+                              MyText(
+                                  txt: "01/03/2023",
+                                  size: 13,
+                                  FontWeight: FontWeight.bold,
+                                  color: Colors.white),
                             ],
                           ),
                         ),
                       ],
                     ),
-                    color: Colors.redAccent,
                   ),
                 ),
                 Expanded(
@@ -205,208 +195,7 @@ class _HomeState extends State<Home> {
               ],
             ),
           ),
-          Align(
-            alignment: Alignment.centerRight,
-            child: Card(
-              elevation: 50,
-              shadowColor: Colors.black,
-              color: Colors.white,
-              child: SizedBox(
-                width: 300,
-                height: 220,
-                child: Padding(
-                  padding: const EdgeInsets.all(2.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 12, vertical: 11),
-                        child: Text(
-                          "HISTORIQUE",
-                          style: TextStyle(
-                              color: Colors.red,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 15),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 11),
-                        child: Row(
-                          children: [
-                            Container(
-                              color: Colors.greenAccent,
-                              height: 25,
-                              width: 2,
-                            ),
-                            SizedBox(
-                              width: 7,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "DATE A VENIR",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 13),
-                                ),
-                                SizedBox(
-                                  height: 2,
-                                ),
-                                Row(
-                                  children: [
-                                    Text(
-                                      "VERSET ESPECES DEPL N",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 13),
-                                    ),
-                                    SizedBox(
-                                      width: 31,
-                                    ),
-                                    Text(
-                                      "+919,00 DH",
-                                      style: TextStyle(
-                                          color: Colors.greenAccent,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 13),
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 11),
-                        child: Row(
-                          children: [
-                            Container(
-                              color: Colors.redAccent,
-                              height: 25,
-                              width: 2,
-                            ),
-                            SizedBox(
-                              width: 7,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "DATE A VENIR",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 13),
-                                ),
-                                SizedBox(
-                                  height: 2,
-                                ),
-                                Row(
-                                  children: [
-                                    Text(
-                                      "VERSET ESPECES DEPL N",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 13),
-                                    ),
-                                    SizedBox(
-                                      width: 31,
-                                    ),
-                                    Text(
-                                      "-19,00 DH",
-                                      style: TextStyle(
-                                          color: Colors.redAccent,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 13),
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 11),
-                        child: Row(
-                          children: [
-                            Container(
-                              color: Colors.greenAccent,
-                              height: 25,
-                              width: 2,
-                            ),
-                            SizedBox(
-                              width: 7,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "DATE A VENIR",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 13),
-                                ),
-                                SizedBox(
-                                  height: 2,
-                                ),
-                                Row(
-                                  children: [
-                                    Text(
-                                      "VERSET ESPECES DEPL N",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 13),
-                                    ),
-                                    SizedBox(
-                                      width: 31,
-                                    ),
-                                    Text(
-                                      "+919,00 DH",
-                                      style: TextStyle(
-                                          color: Colors.greenAccent,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 13),
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 21,
-                      ),
-                      Expanded(
-                        child: Container(
-                          width: double.infinity,
-                          child: ElevatedButton(
-                              style: ButtonStyle(
-                                  backgroundColor:
-                                      MaterialStateProperty.all(Colors.white),
-                                  padding: MaterialStateProperty.all(
-                                      const EdgeInsets.all(0)),
-                                  textStyle: MaterialStateProperty.all(
-                                      const TextStyle(
-                                          fontSize: 12, color: Colors.black))),
-                              onPressed: () {
-                                setState(() {});
-                              },
-                              child: const Text('En')),
-                        ),
-                      ),
-                    ],
-                  ), //Column
-                ), //Padding
-              ), //SizedBox
-            ),
-          ),
+          MyCard(),
         ],
       ),
     );
