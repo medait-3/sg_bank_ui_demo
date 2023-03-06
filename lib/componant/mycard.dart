@@ -185,7 +185,7 @@ class MyCard extends StatelessWidget {
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           primary: Colors.white,
-                          elevation: 20, // Elevation
+                          elevation: 5, // Elevation
                           shadowColor: Colors.black, // Shadow Color
                         ),
                         onPressed: () {},

@@ -6,6 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:sg_bank_ui/componant/mycard.dart';
 import 'package:sg_bank_ui/componant/mytxt.dart';
 
+import 'componant/mybottomcard.dart';
 import 'componant/status_view.dart';
 
 class Home extends StatefulWidget {
@@ -237,8 +238,8 @@ class _HomeState extends State<Home> {
                                     width: 5,
                                   ),
                                   MyText(
-                                      txt: "CARDES",
-                                      size: 13,
+                                      txt: "CARTES",
+                                      size: 11,
                                       FontWeight: FontWeight.bold,
                                       color: Colors.redAccent),
                                 ],
@@ -257,7 +258,8 @@ class _HomeState extends State<Home> {
                                           padding: const EdgeInsets.all(10),
                                           iconSize: 22,
                                           icon: const Icon(
-                                              Icons.card_membership_rounded,
+                                              Icons
+                                                  .transfer_within_a_station_rounded,
                                               color: Colors.red),
                                           onPressed: () {
                                             // do something
@@ -268,10 +270,10 @@ class _HomeState extends State<Home> {
                                     width: 5,
                                   ),
                                   MyText(
-                                      txt: "CARDES",
-                                      size: 13,
+                                      txt: "VIRMENTS",
+                                      size: 11,
                                       FontWeight: FontWeight.bold,
-                                      color: Colors.redAccent),
+                                      color: Colors.pinkAccent),
                                 ],
                               ),
                             ],
@@ -279,82 +281,72 @@ class _HomeState extends State<Home> {
                           SizedBox(
                             height: 10,
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Row(
-                                children: [
-                                  PhysicalModel(
-                                    color: Colors.grey,
-                                    elevation: 4,
-                                    shape: BoxShape.circle,
-                                    child: CircleAvatar(
-                                      radius: 20,
-                                      backgroundColor: Colors.white,
-                                      child: IconButton(
-                                          color: Colors.black,
-                                          padding: const EdgeInsets.all(10),
-                                          iconSize: 22,
-                                          icon: const Icon(
-                                              Icons.card_membership_rounded,
-                                              color: Colors.red),
-                                          onPressed: () {
-                                            // do something
-                                          }),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 18.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Row(
+                                  children: [
+                                    PhysicalModel(
+                                      color: Colors.grey,
+                                      elevation: 4,
+                                      shape: BoxShape.circle,
+                                      child: CircleAvatar(
+                                        radius: 20,
+                                        backgroundColor: Colors.white,
+                                        child: IconButton(
+                                            color: Colors.black,
+                                            iconSize: 22,
+                                            icon: const Icon(Icons.paid,
+                                                color: Colors.purpleAccent),
+                                            onPressed: () {
+                                              // do something
+                                            }),
+                                      ),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  MyText(
-                                      txt: "CARTES",
-                                      size: 13,
-                                      FontWeight: FontWeight.bold,
-                                      color: Colors.redAccent),
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  PhysicalModel(
-                                    color: Colors.grey,
-                                    elevation: 4,
-                                    shape: BoxShape.circle,
-                                    child: CircleAvatar(
-                                      radius: 20,
-                                      backgroundColor: Colors.white,
-                                      child: IconButton(
-                                          color: Colors.black,
-                                          padding: const EdgeInsets.all(10),
-                                          iconSize: 22,
-                                          icon: const Icon(
-                                              Icons.card_membership_rounded,
-                                              color: Colors.red),
-                                          onPressed: () {
-                                            // do something
-                                          }),
+                                    SizedBox(
+                                      width: 5,
                                     ),
-                                  ),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      MyText(
-                                          txt: "MISE A",
-                                          size: 13,
-                                          FontWeight: FontWeight.bold,
-                                          color: Colors.redAccent),
-                                      MyText(
-                                          txt: "DI",
-                                          size: 13,
-                                          FontWeight: FontWeight.bold,
-                                          color: Colors.redAccent),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ],
+                                    MyText(
+                                        txt: "PAIMENTS",
+                                        size: 11,
+                                        FontWeight: FontWeight.bold,
+                                        color: Colors.purpleAccent),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    PhysicalModel(
+                                      color: Colors.grey,
+                                      elevation: 4,
+                                      shape: BoxShape.circle,
+                                      child: CircleAvatar(
+                                        radius: 20,
+                                        backgroundColor: Colors.white,
+                                        child: IconButton(
+                                            color: Colors.black,
+                                            iconSize: 22,
+                                            icon: const Icon(
+                                                Icons.person_outline_sharp,
+                                                color: Colors.black),
+                                            onPressed: () {
+                                              // do something
+                                            }),
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    MyText(
+                                        txt: "MISE A \nDISPOSITION",
+                                        size: 11,
+                                        FontWeight: FontWeight.bold,
+                                        color: Colors.black),
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -365,65 +357,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           MyCard(),
-          Align(
-            alignment: Alignment.bottomRight,
-            child: Container(
-              height: 80,
-              width: 300,
-              color: Colors.redAccent,
-              child: Padding(
-                padding: const EdgeInsets.only(left: 50),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    MyText(
-                      txt: "SG STORE",
-                      size: 13,
-                      fm: "b",
-                      color: Colors.white,
-                      FontWeight: FontWeight.bold,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 70.0),
-                      child: MyText(
-                          txt: "VOTRE BOUTIQUE ONLINE",
-                          size: 11,
-                          fm: "l",
-                          color: Colors.white),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 18.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          MyText(
-                              txt: "DÉCOUVRIR",
-                              size: 11,
-                              fm: "l",
-                              color: Colors.white),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          CircleAvatar(
-                            radius: 10,
-                            backgroundColor: Colors.white,
-                            child: IconButton(
-                                color: Colors.black,
-                                iconSize: 7,
-                                icon: const Icon(Icons.navigate_next_outlined,
-                                    color: Colors.black),
-                                onPressed: () {
-                                  // do something
-                                }),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          )
+          BottomCard(),
         ],
       ),
     );
