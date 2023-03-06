@@ -1,16 +1,2 @@
-# sg_bank_ui
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![334938522_1361030011321559_932795480675389586_n](https://user-images.githubusercontent.com/53193738/223182069-631b5e48-2118-42ae-af7a-10ddc8a64e50.jpg)
+![334934933_535548865377885_3273035461565415688_n](https://user-images.githubusercontent.com/53193738/223182091-3b1f373b-d079-44ad-9201-4eaf9296f032.jpg)
