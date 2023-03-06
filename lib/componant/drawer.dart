@@ -21,7 +21,7 @@ class _MyDrawerState extends State<MyDrawer> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           SizedBox(
-            height: 120,
+            height: 100,
             child: DrawerHeader(
               decoration: BoxDecoration(
                   gradient: LinearGradient(
@@ -97,11 +97,11 @@ class _MyDrawerState extends State<MyDrawer> {
             child: Column(
               children: [
                 Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 2, vertical: 1),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 21,
+                  ),
                   child: Container(
-                    alignment: Alignment.centerLeft,
-                    color: Colors.green,
+                    alignment: Alignment.topLeft,
                     height: 14,
                     child: MyText(
                         txt: "BANQUE OF QUOTIDIEN",
@@ -121,40 +121,59 @@ class _MyDrawerState extends State<MyDrawer> {
                   title: Text("ITEM 6"),
                 ),
                 Divider(),
-                Container(
-                  color: Colors.white70,
-                  height: 11,
-                  child: MyText(
-                      txt: "BANQUE OF QUOTIDIEN",
-                      size: 12,
-                      FontWeight: FontWeight.bold,
-                      color: Colors.red),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 21,
+                  ),
+                  child: Container(
+                    alignment: Alignment.topLeft,
+                    height: 14,
+                    child: MyText(
+                        txt: "BANQUE OF QUOTIDIEN",
+                        size: 12,
+                        FontWeight: FontWeight.bold,
+                        color: Colors.red),
+                  ),
                 ),
                 Divider(),
                 ListTile(
                   title: Text("ITEM 6"),
                 ),
-                Container(
-                  color: Colors.white70,
-                  height: 15,
-                  child: MyText(
-                      txt: "BANQUE OF QUOTIDIEN",
-                      size: 12,
-                      FontWeight: FontWeight.bold,
-                      color: Colors.red),
+                Divider(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 21,
+                  ),
+                  child: Container(
+                    alignment: Alignment.topLeft,
+                    height: 14,
+                    child: MyText(
+                        txt: "BANQUE OF QUOTIDIEN",
+                        size: 12,
+                        FontWeight: FontWeight.bold,
+                        color: Colors.red),
+                  ),
                 ),
+                Divider(),
                 ListTile(
                   title: Text("ITEM 6"),
                 ),
-                Container(
-                  color: Colors.white70,
-                  height: 15,
-                  child: MyText(
-                      txt: "BANQUE OF QUOTIDIEN",
-                      size: 12,
-                      FontWeight: FontWeight.bold,
-                      color: Colors.red),
+                Divider(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 21,
+                  ),
+                  child: Container(
+                    alignment: Alignment.topLeft,
+                    height: 14,
+                    child: MyText(
+                        txt: "BANQUE OF QUOTIDIEN",
+                        size: 12,
+                        FontWeight: FontWeight.bold,
+                        color: Colors.red),
+                  ),
                 ),
+                Divider(),
                 ListTile(
                   title: Text("ITEM 6"),
                 ),
