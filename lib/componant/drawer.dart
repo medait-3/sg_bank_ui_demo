@@ -60,7 +60,7 @@ class _MyDrawerState extends State<MyDrawer> {
                           MyText(
                               align: TextAlign.right,
                               txt: "BONJOUR",
-                              size: 12,
+                              size: 14,
                               fm: "l",
                               FontWeight: FontWeight.bold,
                               color: Colors.black),
@@ -79,11 +79,11 @@ class _MyDrawerState extends State<MyDrawer> {
                   ),
                   CircleAvatar(
                     radius: 20,
-                    backgroundColor: Colors.red,
+                    backgroundColor: Colors.redAccent,
                     child: IconButton(
                         color: Colors.black,
                         iconSize: 22,
-                        icon: const Icon(Icons.person, color: Colors.white),
+                        icon: const Icon(Icons.settings, color: Colors.white),
                         onPressed: () {
                           // do something
                         }),
@@ -96,33 +96,41 @@ class _MyDrawerState extends State<MyDrawer> {
               child: SingleChildScrollView(
             child: Column(
               children: [
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 2, vertical: 1),
+                  child: Container(
+                    alignment: Alignment.centerLeft,
+                    color: Colors.green,
+                    height: 14,
+                    child: MyText(
+                        txt: "BANQUE OF QUOTIDIEN",
+                        size: 12,
+                        FontWeight: FontWeight.bold,
+                        color: Colors.red),
+                  ),
+                ),
+                Divider(),
+                ListTile(
+                  title: Text("ITEM 6"),
+                ),
+                ListTile(
+                  title: Text("ITEM 6"),
+                ),
+                ListTile(
+                  title: Text("ITEM 6"),
+                ),
+                Divider(),
                 Container(
                   color: Colors.white70,
-                  height: 15,
+                  height: 11,
                   child: MyText(
                       txt: "BANQUE OF QUOTIDIEN",
                       size: 12,
                       FontWeight: FontWeight.bold,
                       color: Colors.red),
                 ),
-                ListTile(
-                  title: Text("ITEM 6"),
-                ),
-                ListTile(
-                  title: Text("ITEM 6"),
-                ),
-                ListTile(
-                  title: Text("ITEM 6"),
-                ),
-                Container(
-                  color: Colors.white70,
-                  height: 15,
-                  child: MyText(
-                      txt: "BANQUE OF QUOTIDIEN",
-                      size: 12,
-                      FontWeight: FontWeight.bold,
-                      color: Colors.red),
-                ),
+                Divider(),
                 ListTile(
                   title: Text("ITEM 6"),
                 ),
