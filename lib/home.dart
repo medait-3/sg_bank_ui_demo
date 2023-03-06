@@ -119,7 +119,6 @@ class _HomeState extends State<Home> {
                                       txt: " DH",
                                       size: 33,
                                       FontWeight: FontWeight.bold,
-                                      fm: "b",
                                       color: Colors.white),
                                 ],
                               ),
@@ -224,7 +223,6 @@ class _HomeState extends State<Home> {
                                       backgroundColor: Colors.white,
                                       child: IconButton(
                                           color: Colors.black,
-                                          padding: const EdgeInsets.all(10),
                                           iconSize: 22,
                                           icon: const Icon(
                                               Icons.card_membership_rounded,
@@ -282,7 +280,7 @@ class _HomeState extends State<Home> {
                             height: 10,
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left: 18.0),
+                            padding: const EdgeInsets.only(left: 15.0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
