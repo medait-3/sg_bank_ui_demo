@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:sg_bank_ui/componant/drawer.dart';
 import 'package:sg_bank_ui/componant/mycard.dart';
 import 'package:sg_bank_ui/componant/mytxt.dart';
 
@@ -46,12 +47,8 @@ class _HomeState extends State<Home> {
             ),
           ), //IconButton
         ], //<Widget>[]
-
-        leading: IconButton(
-          icon: const Icon(Icons.segment),
-          onPressed: () {},
-        ),
       ),
+      drawer: MyDrawer(),
       body: Stack(
         children: [
           Container(

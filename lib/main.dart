@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sg_bank_ui/home.dart';
 
+import 'componant/drawer.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Home(),
+      home: Home(),
     );
   }
 }
