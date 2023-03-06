@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:sg_bank_ui/componant/mycard.dart';
-import 'package:sg_bank_ui/componant/mycirculebutton.dart';
 import 'package:sg_bank_ui/componant/mytxt.dart';
 
 import 'componant/status_view.dart';
