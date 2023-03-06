@@ -11,7 +11,7 @@ class MyCard extends StatelessWidget {
     return Align(
       alignment: Alignment.centerRight,
       child: Card(
-        elevation: 5,
+        elevation: 2,
         shadowColor: Colors.black,
 
         child: Container(
@@ -29,6 +29,7 @@ class MyCard extends StatelessWidget {
                     size: 15,
                     FontWeight: FontWeight.bold,
                     color: Colors.red,
+                    fm: "b",
                   ),
                 ),
                 Padding(
@@ -37,7 +38,7 @@ class MyCard extends StatelessWidget {
                     children: [
                       Container(
                         color: Colors.greenAccent,
-                        height: 25,
+                        height: 20,
                         width: 2,
                       ),
                       const SizedBox(
@@ -50,6 +51,7 @@ class MyCard extends StatelessWidget {
                             txt: "DATE A VENIR",
                             size: 13,
                             color: Colors.black,
+                            fm: "l",
                           ),
                           const SizedBox(
                             height: 2,
@@ -60,11 +62,9 @@ class MyCard extends StatelessWidget {
                                 txt: "VERSET ESPECES DEPL N",
                                 size: 13,
                                 color: Colors.black,
-                                FontWeight: FontWeight.bold,
+                                fm: "b",
                               ),
-                              const SizedBox(
-                                width: 35,
-                              ),
+                              const SizedBox(width: 50),
                               MyText(
                                 txt: "+919,00 DH",
                                 size: 13,
@@ -87,7 +87,7 @@ class MyCard extends StatelessWidget {
                     children: [
                       Container(
                         color: Colors.redAccent,
-                        height: 25,
+                        height: 20,
                         width: 2,
                       ),
                       const SizedBox(
@@ -100,6 +100,7 @@ class MyCard extends StatelessWidget {
                             txt: "DATE A VENIR",
                             size: 13,
                             color: Colors.black,
+                            fm: "l",
                           ),
                           const SizedBox(
                             height: 2,
@@ -110,13 +111,11 @@ class MyCard extends StatelessWidget {
                                 txt: "VERSET ESPECES DEPL N",
                                 size: 13,
                                 color: Colors.black,
-                                FontWeight: FontWeight.bold,
+                                fm: "b",
                               ),
-                              const SizedBox(
-                                width: 35,
-                              ),
+                              const SizedBox(width: 50),
                               MyText(
-                                txt: "-919,00 DH",
+                                txt: "+919,00 DH",
                                 size: 13,
                                 color: Colors.redAccent,
                                 FontWeight: FontWeight.bold,
@@ -137,7 +136,7 @@ class MyCard extends StatelessWidget {
                     children: [
                       Container(
                         color: Colors.greenAccent,
-                        height: 25,
+                        height: 20,
                         width: 2,
                       ),
                       const SizedBox(
@@ -150,6 +149,7 @@ class MyCard extends StatelessWidget {
                             txt: "DATE A VENIR",
                             size: 13,
                             color: Colors.black,
+                            fm: "l",
                           ),
                           const SizedBox(
                             height: 2,
@@ -160,11 +160,9 @@ class MyCard extends StatelessWidget {
                                 txt: "VERSET ESPECES DEPL N",
                                 size: 13,
                                 color: Colors.black,
-                                FontWeight: FontWeight.bold,
+                                fm: "b",
                               ),
-                              const SizedBox(
-                                width: 35,
-                              ),
+                              const SizedBox(width: 50),
                               MyText(
                                 txt: "+919,00 DH",
                                 size: 13,

@@ -14,16 +14,16 @@ class MyCirculbutton extends StatelessWidget {
     return Row(
       children: [
         PhysicalModel(
-          color: Colors.black,
-          elevation: 10,
+          color: Colors.grey,
+          elevation: 4,
           shape: BoxShape.circle,
           child: CircleAvatar(
-            radius: 25,
+            radius: 20,
             backgroundColor: Colors.white,
             child: IconButton(
                 color: Colors.black,
                 padding: const EdgeInsets.all(10),
-                iconSize: 30,
+                iconSize: 25,
                 icon: const Icon(Icons.card_membership_rounded,
                     color: Colors.red),
                 onPressed: () {

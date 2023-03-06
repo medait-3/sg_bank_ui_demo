@@ -7,7 +7,6 @@ import 'package:sg_bank_ui/componant/mycard.dart';
 import 'package:sg_bank_ui/componant/mycirculebutton.dart';
 import 'package:sg_bank_ui/componant/mytxt.dart';
 
-import 'componant/appbar.dart';
 import 'componant/status_view.dart';
 
 class Home extends StatefulWidget {
@@ -19,6 +18,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   final _prix = 12122;
+  final stars = " ****";
   late bool _passwordVisible;
 
   @override
@@ -34,7 +34,7 @@ class _HomeState extends State<Home> {
         titleSpacing: 0.00,
         backgroundColor: Colors.redAccent,
         title: Text(
-          "ACUEIL",
+          "ACCUEIL",
           style: TextStyle(fontSize: 14),
         ),
         actions: <Widget>[
@@ -42,7 +42,6 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: IconButton(
               icon: const Icon(Icons.notifications),
-              tooltip: 'Comment Icon',
               onPressed: () {},
             ),
           ), //IconButton
@@ -50,7 +49,6 @@ class _HomeState extends State<Home> {
 
         leading: IconButton(
           icon: const Icon(Icons.segment),
-          tooltip: 'Menu Icon',
           onPressed: () {},
         ),
       ),
@@ -77,6 +75,7 @@ class _HomeState extends State<Home> {
                             children: [
                               MyText(
                                 txt: "COMPTE",
+                                fm: "l",
                                 size: 16,
                                 color: Colors.white,
                                 FontWeight: null,
@@ -84,6 +83,7 @@ class _HomeState extends State<Home> {
                               MyText(
                                   txt: " CHÉQUE DIRHAMS",
                                   size: 16,
+                                  fm: "b",
                                   color: Colors.white,
                                   FontWeight: FontWeight.bold),
                             ],
@@ -98,19 +98,28 @@ class _HomeState extends State<Home> {
                             children: [
                               Row(
                                 children: [
-                                  Visibility(
-                                    visible: _passwordVisible,
-                                    child: Text(
-                                      "${_prix}",
-                                      style: const TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 18),
-                                    ),
-                                  ),
+                                  _passwordVisible == false
+                                      ? Text(
+                                          "${_prix}",
+                                          style: const TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                              fontFamily: "b",
+                                              fontSize: 35),
+                                        )
+                                      : Text(
+                                          "${stars}",
+                                          style: const TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                              fontFamily: "b",
+                                              fontSize: 35),
+                                        ),
                                   MyText(
                                       txt: " DH",
-                                      size: 18,
+                                      size: 33,
+                                      FontWeight: FontWeight.bold,
+                                      fm: "b",
                                       color: Colors.white),
                                 ],
                               ),
@@ -140,11 +149,12 @@ class _HomeState extends State<Home> {
                                 children: [
                                   const Icon(
                                     Icons.transit_enterexit,
-                                    color: Colors.white,
+                                    color: Colors.white70,
                                     size: 18.0,
                                   ),
                                   MyText(
                                       txt: "EN TRAITMENT",
+                                      fm: "l",
                                       size: 13,
                                       color: Colors.white),
                                 ],
@@ -167,11 +177,12 @@ class _HomeState extends State<Home> {
                                 children: [
                                   const Icon(
                                     Icons.replay,
-                                    color: Colors.white,
+                                    color: Colors.white70,
                                     size: 18.0,
                                   ),
                                   MyText(
                                       txt: "MISE A JOUR",
+                                      fm: "l",
                                       size: 13,
                                       color: Colors.white),
                                 ],
@@ -190,47 +201,159 @@ class _HomeState extends State<Home> {
                 ),
                 Expanded(
                   child: Container(
-                    color: Colors.white12,
+                    color: Colors.white70,
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 38.0),
+                      padding: const EdgeInsets.only(left: 0),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SizedBox(
-                            height: 40,
+                            height: 20,
                           ),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              MyCirculbutton(
-                                title: "CARTES",
-                                color1: Colors.red,
+                              Row(
+                                children: [
+                                  PhysicalModel(
+                                    color: Colors.grey,
+                                    elevation: 4,
+                                    shape: BoxShape.circle,
+                                    child: CircleAvatar(
+                                      radius: 20,
+                                      backgroundColor: Colors.white,
+                                      child: IconButton(
+                                          color: Colors.black,
+                                          padding: const EdgeInsets.all(10),
+                                          iconSize: 22,
+                                          icon: const Icon(
+                                              Icons.card_membership_rounded,
+                                              color: Colors.red),
+                                          onPressed: () {
+                                            // do something
+                                          }),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  MyText(
+                                      txt: "CARDES",
+                                      size: 13,
+                                      FontWeight: FontWeight.bold,
+                                      color: Colors.redAccent),
+                                ],
                               ),
-                              SizedBox(
-                                width: 52,
-                              ),
-                              MyCirculbutton(
-                                title: " VIRMENTS",
-                                color1: Colors.red,
+                              Row(
+                                children: [
+                                  PhysicalModel(
+                                    color: Colors.grey,
+                                    elevation: 4,
+                                    shape: BoxShape.circle,
+                                    child: CircleAvatar(
+                                      radius: 20,
+                                      backgroundColor: Colors.white,
+                                      child: IconButton(
+                                          color: Colors.black,
+                                          padding: const EdgeInsets.all(10),
+                                          iconSize: 22,
+                                          icon: const Icon(
+                                              Icons.card_membership_rounded,
+                                              color: Colors.red),
+                                          onPressed: () {
+                                            // do something
+                                          }),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  MyText(
+                                      txt: "CARDES",
+                                      size: 13,
+                                      FontWeight: FontWeight.bold,
+                                      color: Colors.redAccent),
+                                ],
                               ),
                             ],
                           ),
                           SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              MyCirculbutton(
-                                title: "CARTES",
-                                color1: Colors.red,
+                              Row(
+                                children: [
+                                  PhysicalModel(
+                                    color: Colors.grey,
+                                    elevation: 4,
+                                    shape: BoxShape.circle,
+                                    child: CircleAvatar(
+                                      radius: 20,
+                                      backgroundColor: Colors.white,
+                                      child: IconButton(
+                                          color: Colors.black,
+                                          padding: const EdgeInsets.all(10),
+                                          iconSize: 22,
+                                          icon: const Icon(
+                                              Icons.card_membership_rounded,
+                                              color: Colors.red),
+                                          onPressed: () {
+                                            // do something
+                                          }),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  MyText(
+                                      txt: "CARTES",
+                                      size: 13,
+                                      FontWeight: FontWeight.bold,
+                                      color: Colors.redAccent),
+                                ],
                               ),
-                              SizedBox(
-                                width: 52,
-                              ),
-                              MyCirculbutton(
-                                title: " VIRMENTS",
-                                color1: Colors.red,
+                              Row(
+                                children: [
+                                  PhysicalModel(
+                                    color: Colors.grey,
+                                    elevation: 4,
+                                    shape: BoxShape.circle,
+                                    child: CircleAvatar(
+                                      radius: 20,
+                                      backgroundColor: Colors.white,
+                                      child: IconButton(
+                                          color: Colors.black,
+                                          padding: const EdgeInsets.all(10),
+                                          iconSize: 22,
+                                          icon: const Icon(
+                                              Icons.card_membership_rounded,
+                                              color: Colors.red),
+                                          onPressed: () {
+                                            // do something
+                                          }),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      MyText(
+                                          txt: "MISE A",
+                                          size: 13,
+                                          FontWeight: FontWeight.bold,
+                                          color: Colors.redAccent),
+                                      MyText(
+                                          txt: "DI",
+                                          size: 13,
+                                          FontWeight: FontWeight.bold,
+                                          color: Colors.redAccent),
+                                    ],
+                                  ),
+                                ],
                               ),
                             ],
                           ),
@@ -246,25 +369,59 @@ class _HomeState extends State<Home> {
           Align(
             alignment: Alignment.bottomRight,
             child: Container(
-              height: 65,
+              height: 80,
               width: 300,
               color: Colors.redAccent,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    "SG STORE",
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    "VOTRE BOUTIQUE ONLINE",
-                    style: TextStyle(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 50),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    MyText(
+                      txt: "SG STORE",
+                      size: 13,
+                      fm: "b",
                       color: Colors.white,
+                      FontWeight: FontWeight.bold,
                     ),
-                  ),
-                ],
+                    Padding(
+                      padding: const EdgeInsets.only(left: 70.0),
+                      child: MyText(
+                          txt: "VOTRE BOUTIQUE ONLINE",
+                          size: 11,
+                          fm: "l",
+                          color: Colors.white),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 18.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          MyText(
+                              txt: "DÉCOUVRIR",
+                              size: 11,
+                              fm: "l",
+                              color: Colors.white),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          CircleAvatar(
+                            radius: 10,
+                            backgroundColor: Colors.white,
+                            child: IconButton(
+                                color: Colors.black,
+                                iconSize: 7,
+                                icon: const Icon(Icons.navigate_next_outlined,
+                                    color: Colors.black),
+                                onPressed: () {
+                                  // do something
+                                }),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           )

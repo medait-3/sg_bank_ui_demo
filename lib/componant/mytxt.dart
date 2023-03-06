@@ -8,16 +8,19 @@ class MyText extends StatelessWidget {
       required this.txt,
       required this.size,
       required this.color,
-      this.FontWeight});
+      this.FontWeight,
+      this.fm});
   final String txt;
   final double size;
   final Color color;
   final FontWeight;
+  final fm;
   @override
   Widget build(BuildContext context) {
     return Text(
       txt,
-      style: TextStyle(color: color, fontSize: size, fontWeight: FontWeight),
+      style: TextStyle(
+          color: color, fontSize: size, fontWeight: FontWeight, fontFamily: fm),
     );
   }
 }

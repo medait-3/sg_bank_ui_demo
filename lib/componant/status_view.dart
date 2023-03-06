@@ -13,11 +13,11 @@ class Status extends StatelessWidget {
       child: Column(
         children: [
           StatusView(
-            radius: 20,
-            spacing: 8,
+            radius: 18,
+            spacing: 19,
             strokeWidth: 2,
             indexOfSeenStatus: 3,
-            numberOfStatus: 3,
+            numberOfStatus: 5,
             padding: 4,
             centerImageUrl: "https://picsum.photos/200/300",
             seenColor: Colors.white,
