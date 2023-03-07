@@ -24,14 +24,21 @@ class _MyDrawerState extends State<MyDrawer> {
             height: 100,
             child: DrawerHeader(
               decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: Offset(0, 1.0), //(x,y)
+                      blurRadius: 6.0,
+                    ),
+                  ],
                   gradient: LinearGradient(
-                begin: Alignment.bottomCenter,
-                end: Alignment.centerRight,
-                colors: [
-                  Colors.white,
-                  Colors.red,
-                ],
-              )),
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.centerRight,
+                    colors: [
+                      Colors.white,
+                      Colors.red,
+                    ],
+                  )),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -98,7 +105,7 @@ class _MyDrawerState extends State<MyDrawer> {
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(
-                    horizontal: 21,
+                    horizontal: 22,
                   ),
                   child: Container(
                     alignment: Alignment.topLeft,
@@ -110,17 +117,105 @@ class _MyDrawerState extends State<MyDrawer> {
                         color: Colors.red),
                   ),
                 ),
-                Divider(),
-                ListTile(
-                  title: Text("ITEM 6"),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 2,
+                  ),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.money,
+                      color: Colors.redAccent,
+                    ),
+                    title: Text('COMPTES'),
+                    minLeadingWidth: 10,
+                  ),
                 ),
-                ListTile(
-                  title: Text("ITEM 6"),
+                Stack(
+                  children: [
+                    Divider(
+                      thickness: 0.5,
+                      color: Colors.grey[400],
+                    ),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 14, vertical: 7),
+                        child: Container(
+                          color: Colors.redAccent,
+                          height: 1,
+                          width: 30,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                ListTile(
-                  title: Text("ITEM 6"),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 2,
+                  ),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.money,
+                      color: Colors.redAccent,
+                    ),
+                    title: Text('COMPTES'),
+                    minLeadingWidth: 10,
+                  ),
                 ),
-                Divider(),
+                Stack(
+                  children: [
+                    Divider(
+                      thickness: 0.5,
+                      color: Colors.grey[400],
+                    ),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 14, vertical: 7),
+                        child: Container(
+                          color: Colors.redAccent,
+                          height: 1,
+                          width: 30,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 2,
+                  ),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.money,
+                      color: Colors.redAccent,
+                    ),
+                    title: Text('COMPTES'),
+                    minLeadingWidth: 10,
+                  ),
+                ),
+                Stack(
+                  children: [
+                    Divider(
+                      thickness: 0.5,
+                      color: Colors.grey[400],
+                    ),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 14, vertical: 7),
+                        child: Container(
+                          color: Colors.redAccent,
+                          height: 1,
+                          width: 30,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
                 Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 21,
@@ -129,17 +224,45 @@ class _MyDrawerState extends State<MyDrawer> {
                     alignment: Alignment.topLeft,
                     height: 14,
                     child: MyText(
-                        txt: "BANQUE OF QUOTIDIEN",
+                        txt: "CRÉDITS",
                         size: 12,
                         FontWeight: FontWeight.bold,
                         color: Colors.red),
                   ),
                 ),
-                Divider(),
-                ListTile(
-                  title: Text("ITEM 6"),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 2,
+                  ),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.money,
+                      color: Colors.redAccent,
+                    ),
+                    title: Text('CRÉDITS'),
+                    minLeadingWidth: 10,
+                  ),
                 ),
-                Divider(),
+                Stack(
+                  children: [
+                    Divider(
+                      thickness: 0.5,
+                      color: Colors.grey[400],
+                    ),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 14, vertical: 7),
+                        child: Container(
+                          color: Colors.redAccent,
+                          height: 1,
+                          width: 30,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
                 Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 21,
@@ -148,17 +271,45 @@ class _MyDrawerState extends State<MyDrawer> {
                     alignment: Alignment.topLeft,
                     height: 14,
                     child: MyText(
-                        txt: "BANQUE OF QUOTIDIEN",
+                        txt: "DÉCOUVRIR NOS PRODUITS",
                         size: 12,
                         FontWeight: FontWeight.bold,
                         color: Colors.red),
                   ),
                 ),
-                Divider(),
-                ListTile(
-                  title: Text("ITEM 6"),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 2,
+                  ),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.money,
+                      color: Colors.redAccent,
+                    ),
+                    title: Text('COMPTES'),
+                    minLeadingWidth: 10,
+                  ),
                 ),
-                Divider(),
+                Stack(
+                  children: [
+                    Divider(
+                      thickness: 0.5,
+                      color: Colors.grey[400],
+                    ),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 14, vertical: 7),
+                        child: Container(
+                          color: Colors.redAccent,
+                          height: 1,
+                          width: 30,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
                 Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 21,
@@ -167,15 +318,58 @@ class _MyDrawerState extends State<MyDrawer> {
                     alignment: Alignment.topLeft,
                     height: 14,
                     child: MyText(
-                        txt: "BANQUE OF QUOTIDIEN",
+                        txt: "DOTATIONS & RECHARGES",
                         size: 12,
                         FontWeight: FontWeight.bold,
                         color: Colors.red),
                   ),
                 ),
-                Divider(),
-                ListTile(
-                  title: Text("ITEM 6"),
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 2,
+                  ),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.money,
+                      color: Colors.redAccent,
+                    ),
+                    title: Text('COMPTES'),
+                    trailing: ElevatedButton(
+                        child: Text("NOVEAU".toUpperCase(),
+                            style: TextStyle(fontSize: 10)),
+                        style: ButtonStyle(
+                            foregroundColor:
+                                MaterialStateProperty.all<Color>(Colors.white),
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(Colors.red),
+                            shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(55.0),
+                                    side: BorderSide(color: Colors.red)))),
+                        onPressed: () => null),
+                    minLeadingWidth: 10,
+                  ),
+                ),
+                Stack(
+                  children: [
+                    Divider(
+                      thickness: 0.5,
+                      color: Colors.grey[400],
+                    ),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 14, vertical: 7),
+                        child: Container(
+                          color: Colors.redAccent,
+                          height: 1,
+                          width: 30,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 ListTile(
                   title: Text("ITEM 6"),
@@ -215,19 +409,58 @@ class _MyDrawerState extends State<MyDrawer> {
           )),
           Container(
               decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: Offset(0, 1.0), //(x,y)
+                      blurRadius: 6.0,
+                    ),
+                  ],
                   gradient: LinearGradient(
-                begin: Alignment.bottomCenter,
-                end: Alignment.centerRight,
-                colors: [
-                  Colors.white,
-                  Colors.red,
-                ],
-              )),
-              height: 100,
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.centerRight,
+                    colors: [
+                      Colors.white,
+                      Colors.red,
+                    ],
+                  )),
+              height: 90,
               child: Align(
                   alignment: FractionalOffset.bottomCenter,
                   child: Column(
-                    children: <Widget>[],
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(9.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Image.asset(
+                              "assets/sg.png",
+                              height: 70,
+                            ),
+                            ElevatedButton(
+                                child: Text("DÉCONNIXON".toUpperCase(),
+                                    style: TextStyle(
+                                        fontSize: 10, fontFamily: "b")),
+                                style: ButtonStyle(
+                                    foregroundColor:
+                                        MaterialStateProperty.all<Color>(
+                                            Colors.white),
+                                    backgroundColor:
+                                        MaterialStateProperty.all<Color>(
+                                            Colors.red),
+                                    shape: MaterialStateProperty.all<
+                                            RoundedRectangleBorder>(
+                                        RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(55.0),
+                                            side: BorderSide(
+                                                color: Colors.red)))),
+                                onPressed: () => null),
+                          ],
+                        ),
+                      ),
+                    ],
                   ))),
         ],
       ),
